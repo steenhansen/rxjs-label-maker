@@ -1,0 +1,339 @@
+#can-mail:checked~.darken-can {
+    font-weight: bold;
+}
+
+#nz-mail:checked~.darken-nz {
+    font-weight: bold;
+}
+
+#usa-mail:checked~.darken-usa {
+    font-weight: bold;
+}
+
+.darken-can {
+    line-height: 20px;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-family: var(--sans-serif);
+}
+
+.darken-nz {
+    line-height: 20px;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-family: var(--sans-serif);
+}
+
+.darken-usa {
+    line-height: 20px;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-family: var(--sans-serif);
+}
+
+#mailType-person:checked~.darken-type {
+    line-height: 14px;
+    font-weight: bold;
+}
+
+#mailType-firm:checked~.darken-type {
+    line-height: 12px;
+    font-weight: bold;
+}
+
+#mailType-parliament:checked~.darken-type {
+    line-height: 12px;
+    font-weight: bold;
+}
+
+#mailType-senate:checked~.darken-type {
+    line-height: 12px;
+    font-weight: bold;
+}
+
+#mailType-whouse:checked~.darken-type {
+    line-height: 14px;
+    font-weight: bold;
+}
+
+.darken-type {
+    width: 100%;
+    display: block;
+    height: 12px;
+    line-height: 12px;
+    margin-left: 4px;
+}
+
+#the-white-house {
+    margin-left: 2px;
+}
+
+#can-mail {
+    color: var(--can-color-hsl);
+}
+
+#nz-mail {
+    color: var(--nz-color-hsl);
+}
+
+#usa-mail {
+    color: var(--usa-color-hsl);
+}
+
+#rx-label-maker>#struct_receiver_types {
+    height: var( --tab-type-height);
+}
+
+[id*="tab-type--"] {
+    background-color: var(--gray-tabs-background);
+    user-select: none;
+    border-color: hsl(var(--current-outline-hue), 50%, 50%);
+    display: inline-block;
+    height: inherit;
+    position: relative;
+}
+
+#tab-type--person {
+    border-color: var(--current-outline-color);
+    font-family: var(--sans-serif);
+}
+
+#tab-type--person:hover {
+    color: var(--average-grey-color);
+}
+
+#tab-type--firm {
+    border-color: var(--current-outline-color);
+    font-family: var(--mono-space);
+}
+
+#tab-type--firm:hover {
+    color: var(--average-grey-color);
+}
+
+#tab-type--parliament {
+    border-color: var(--current-outline-color);
+    display: inline-block;
+    font-family: var(--with-serif);
+}
+
+#tab-type--parliament:hover {
+    color: var(--average-grey-color);
+}
+
+#tab-type--senate {
+    border-color: var(--current-outline-color);
+    font-family: var(--with-serif);
+}
+
+#tab-type--senate:hover {
+    color: var(--average-grey-color);
+}
+
+#tab-type--whouse {
+    border-color: var(--current-outline-color);
+    font-family: var(--with-serif);
+    font-size: 1.1rem;
+}
+
+#tab-type--whouse:hover {
+    color: var(--average-grey-color);
+}
+
+[id*="tab-country--"] {
+    user-select: none;
+    border-color: var(--current-outline-color);
+    background-color: var(--gray-tabs-background);
+    border-radius: 10px 10px 0px 0px;
+    border-right-style: solid;
+    border-top-style: solid;
+    border-left-style: solid;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-left-width: 2px;
+    display: inline-block;
+    position: relative;
+}
+
+.country-selected {
+    background-color: var(--back-ground-color);
+}
+
+#tab-country--can {
+    color: var(--can-color-hsl);
+    height: var( --can-tab-height);
+    left: 30px;
+}
+
+#tab-country--can:hover {
+    color: var(--can-color-hover);
+}
+
+#tab-country--nz {
+    color: var(--nz-color-hsl);
+    height: var( --nz-tab-height);
+    left: 35px;
+}
+
+#tab-country--nz:hover {
+    color: var(--nz-color-hover);
+}
+
+#tab-country--usa {
+    color: var(--usa-color-hsl);
+    height: var( --usa-tab-height);
+    left: 40px;
+}
+
+#tab-country--usa:hover {
+    color: var(--usa-color-hover);
+}
+
+#struct_term_input {
+    user-select: none;
+    font-family: var( --sans-serif);
+    font-size: 14px;
+    border-color: var(--current-outline-color);
+    background-color: var(--back-ground-color);
+    border-radius: 10px 10px 0px 0px;
+    border-left-style: solid;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-left-width: 2px;
+    border-top-width: 2px;
+    border-right-width: 2px;
+}
+
+#struct_serv_input {
+    border-color: var(--current-outline-color);
+    font-family: var( --current-type-style);
+    background-color: var(--back-ground-color);
+    border-left-style: solid;
+    border-right-style: solid;
+    border-left-width: 2px;
+    border-right-width: 2px;
+}
+
+#struct_salu_input {
+    user-select: none;
+    border-color: var(--current-outline-color);
+    font-family: var( --current-type-style);
+    background-color: var(--back-ground-color);
+    border-left-style: solid;
+    border-right-style: solid;
+    border-left-width: 2px;
+    border-right-width: 2px;
+}
+
+#struct_name_input {
+    border-color: var(--current-outline-color);
+    font-family: var( --current-type-style);
+    background-color: var(--back-ground-color);
+    border-left-style: solid;
+    border-right-style: solid;
+    border-left-width: 2px;
+    border-right-width: 2px;
+}
+
+#struct_strt_input {
+    border-color: var(--current-outline-color);
+    font-family: var( --current-type-style);
+    background-color: var(--back-ground-color);
+    border-left-style: solid;
+    border-right-style: solid;
+    border-left-width: 2px;
+    border-right-width: 2px;
+}
+
+#struct_city_input {
+    border-color: var(--current-outline-color);
+    font-family: var( --current-type-style);
+    background-color: var(--back-ground-color);
+    border-left-style: solid;
+    border-right-style: solid;
+    border-left-width: 2px;
+    border-right-width: 2px;
+}
+
+#struct_prov_input {
+    border-color: var(--current-outline-color);
+    font-family: var( --current-type-style);
+    background-color: var(--back-ground-color);
+    border-left-style: solid;
+    border-right-style: solid;
+    border-left-width: 2px;
+    border-right-width: 2px;
+}
+
+#struct_code_input {
+    border-color: var(--current-outline-color);
+    font-family: var( --current-type-style);
+    background-color: var(--back-ground-color);
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.cutout-label {
+    border: dotted;
+    border-color: var(--current-outline-color);
+    display: inline-block;
+    padding: 8px;
+    border-width: 3px;
+    line-height: 24px;
+    width: 308px;
+}
+
+.cutout-incomplete {
+    border: dotted;
+    border-color: gray;
+    display: inline-block;
+    padding: 8px;
+    border-width: 3px;
+    line-height: 24px;
+    width: 308px;
+}
+
+#can-person {
+    font-family: var(--sans-serif);
+}
+
+#can-firm {
+    font-family: var(--mono-space);
+}
+
+#can-parliament {
+    font-family: var(--with-serif);
+}
+
+#can-senate {
+    font-family: var(--with-serif);
+}
+
+#nz-person {
+    font-family: var(--sans-serif);
+}
+
+#nz-firm {
+    font-family: var(--mono-space);
+}
+
+#nz-parliament {
+    font-family: var(--with-serif);
+}
+
+#usa-person {
+    font-family: var(--sans-serif);
+}
+
+#usa-firm {
+    font-family: var(--mono-space);
+}
+
+#usa-whouse {
+    font-family: var(--with-serif);
+}

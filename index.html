@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>RxJs Label Maker</title>
+
+    <script src="lib/rx-5.5.11.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="styles/0px-and-up.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="styles/500px-wide.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="styles/390px-medium.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="styles/330px-thin.css" media="screen" />
+
+    <link rel="stylesheet" type="text/css" href="styles/outline-tabs.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="styles/label-maker.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="styles/states-provs.css" media="screen" />
+
+</head>
+
+<body>
+
+
+
+
+
+
+<br>
+
+
+
+
+
+    <div id="rx-label-container">
+
+
+        <div id="rx-label-maker" class="struct-container struct-types ">
+
+
+
+
+
+
+  
+
+
+
+            <div class="struct-items struct-left" id="struct_top_emtpy_label">&nbsp;</div>
+            <div class="struct-items struct-left" id="struct_term_label">
+                <div id="terms-need" class="start-need have-data">Accept</div>
+            </div>
+
+            <div class="struct-items struct-left" id="struct_serv_label">
+                <div style="display:none" id="canpost-need" class="start-need usa-off nz-off can-on">Service</div>
+                <div id="usapost-need" class="start-need have-data usa-on nz-off can-off">Service</div>
+                <div style="display:none" id="nzpost-need" class="start-need usa-off nz-on can-off">Service</div>
+            </div>
+
+            <div class="struct-items struct-left" id="struct_salu_label">
+                <div class=" mailType-person-on mailType-firm-off mailType-parliament-off mailType-senate-off mailType-whouse-off">
+
+                    <div style="display:none;" id="personSalutation-need" class="start-need can-on   nz-on     usa-on  ">
+                        Salutation</div>
+                </div>
+
+                <div style="display:none" id="firm-attention" class="mailType-person-off mailType-firm-on mailType-parliament-off mailType-senate-off mailType-whouse-off">
+                    Attention
+                </div>
+
+                <div class="start-need mailType-person-off mailType-firm-off mailType-parliament-on mailType-senate-on mailType-whouse-off">
+                    <div style="display:none" id="parliamentCan-need" class="start-need usa-off nz-off can-on">Honourific</div>
+                    <div style="display:none" id="parliamentNz-need" class="start-need usa-off nz-on can-off">Honourific</div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="struct-items struct-left" id="struct_name_label">
+                <div style="display:none" id="person-need" class="start-need  mailType-person-on  mailType-firm-off mailType-parliament-off mailType-senate-off mailType-whouse-off">
+                    Person</div>
+                <div style="display:none" id="firm-need" class="start-need  mailType-person-off mailType-firm-on  mailType-parliament-off mailType-senate-off mailType-whouse-off">
+                    Firm</div>
+                <div style="display:none" id="parliament-need" class="start-need  mailType-person-off mailType-firm-off mailType-parliament-on  mailType-senate-off mailType-whouse-off">
+                    Member</div>
+                <div style="display:none" id="senate-need" class="start-need  mailType-person-off mailType-firm-off mailType-parliament-off mailType-senate-on  mailType-whouse-off">
+                    Senator</div>
+                <div style="display:none" id="whouse-need" class="start-need  mailType-person-off mailType-firm-off mailType-parliament-off mailType-senate-off mailType-whouse-on">
+                </div>
+            </div>
+            <div class="struct-items struct-left" id="struct_strt_label"> <span class="mailType-person-on mailType-firm-on mailType-parliament-off mailType-senate-off mailType-whouse-off">
+
+          <span style="display:none" id="address-need" class="start-need  can-on   nz-on     usa-on  ">Street</span>
+
+                <span></div>
+      <div class="struct-items struct-left" id="struct_city_label">
+        <span
+          class="mailType-person-on mailType-firm-on mailType-parliament-off mailType-senate-off mailType-whouse-off">
+          <span style="display:none" id="city-need"
+            class="start-need               can-on   nz-on     usa-on  ">City</span>
+                </span>
+            </div>
+
+            <div class="struct-items struct-left" id="struct_prov_label">
+                <div style="display:none" id="province-need" class="start-need can-on   nz-off     usa-off  ">
+                    <span class="mailType-person-on mailType-firm-on mailType-parliament-off mailType-senate-off mailType-whouse-off">
+            Province <span>
+        </div>
+        <div style="display:none" id="state-need" class="start-need can-off   nz-off     usa-on  ">
+          <span
+            class="mailType-person-on mailType-firm-on mailType-parliament-off mailType-senate-off mailType-whouse-off">
+            State <span>
+        </div>
+      </div>
+
+
+      <div class="struct-items struct-left" id="struct_code_label">
+        <div style="display:none" id="cancode-need" class="start-need can-on   nz-off     usa-off  ">
+          <span
+            class="mailType-person-on mailType-firm-on mailType-parliament-off mailType-senate-off mailType-whouse-off">
+            Postal Code <span>
+        </div>
+
+
+        <div style="display:none" id="nzcode-need" class="start-need can-off   nz-on     usa-off  ">
+          <span
+            class="mailType-person-on mailType-firm-on mailType-parliament-off mailType-senate-off mailType-whouse-off">
+            Postcode <span>
+        </div>
+
+
+        <div style="display:none" id="usacode-need" class="start-need can-off   nz-off     usa-on  ">
+          <span
+            class="mailType-person-on mailType-firm-on mailType-parliament-off mailType-senate-off mailType-whouse-off">
+            Zip Code <span>
+        </div>
+      </div>
+
+
+      <div class="struct-items struct-left" id="struct_bottom_emtpy_label"> &nbsp;</div>
+
+
+      <div id="struct_countries_input" class="struct-middle">
+        <!--  https://www.ourcommons.ca/en/contact-us       
+              https://www.parliament.nz/en/get-involved/have-your-say/contact-an-mp/   
+              https://sencanada.ca/en/contactus 
+              https://www.whitehouse.gov/get-involved/write-or-call/ -->
+        <span id="mailType-container">
+
+
+
+
+
+          <span id="tab-country--can">
+            <input type="radio" id="can-mail" name="country_mail" autocomplete="off" class="hide-circle" />
+            <label class="darken-can" for="can-mail">Canada</label>
+          </span>
+
+                    <span id="tab-country--nz">
+            <input type="radio" id="nz-mail" name="country_mail" autocomplete="off" class="hide-circle" />
+            <label class="darken-nz" for="nz-mail">New Zealand</label>
+          </span>
+
+                    <span id="tab-country--usa">
+            <input type="radio" id="usa-mail" name="country_mail" autocomplete="off" class="hide-circle" />
+            <label class="darken-usa" for="usa-mail">USA</label>
+          </span>
+
+
+
+
+                    </span>
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                <div id="struct_term_input" class="struct-middle">
+                    <div id="terms-container">
+                        <input class="terms-is-required" type="checkbox" id="terms-accept" name="terms_accept" autocomplete="off" value="terms are accepted" required="required" />
+                        <label for="terms-accept">I Agree to Terms of Mail Service</label>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+                <div id="struct_serv_input" class="struct-middle">
+
+                    <div style="display:none;" id="canpost-container" class="usa-off nz-off can-on">
+
+                        <select class="canpost-is-required" name="delivery_service" id="canpost-delivery" autocomplete="off" required="required">
+            <option value="">- Chose Canada Post Service -</option>
+            <option value="Priority Post">Priority Post</option>
+            <option value="Xpresspost">Xpresspost</option>
+            <option value="Standard Post">Standard Post</option>
+          </select>
+
+                    </div>
+
+                    <div id="usapost-container" class="usa-on nz-off can-off">
+                        <select class="usapost-is-required" name="delivery_service" id="usapost-delivery" autocomplete="off" required="required">
+            <option value="">- Choose USPS Service -</option>
+            <option value="Priority Mail Express">Priority Mail Express</option>
+            <option value="Priority Mail">Priority Mail</option>
+            <option value="First-Class Mail" selected="selected">First-Class Mail</option>
+          </select>
+
+                    </div>
+
+                    <div style="display:none" id="nzpost-container" class="usa-off nz-on can-off">
+
+                        <select class="nzpost-is-required" name="delivery_service" id="nzpost-delivery" autocomplete="off" required="required">
+            <option value="">- Choose New Zealand Post Service -</option>
+            <option value="Same Day">Same Day</option>
+            <option value="Overnight">Overnight</option>
+            <option value="Economy">Economy</option>
+          </select>
+
+                    </div>
+                </div>
+
+
+
+                <div id="struct_salu_input" class="struct-middle">
+
+                    <div style="display:none; " id="personSalutation-container" class="mailType-person-on mailType-firm-off mailType-parliament-off mailType-senate-off mailType-whouse-off">
+
+                        <input class="salutation-is-required" type="radio" id="personSalutation-neutral" name="honourific_salutation" autocomplete="off" value='' />
+                        <label for="personSalutation-neutral">Neutral</label>
+                        <input type="radio" id="personSalutation-ms" name="honourific_salutation" autocomplete="off" value='Ms' />
+                        <label for="personSalutation-ms">Ms</label>
+                        <input type="radio" id="personSalutation-mr" name="honourific_salutation" autocomplete="off" value='Mr' />
+                        <label for="personSalutation-mr">Mr</label>
+                        <input type="radio" id="personSalutation-dr" name="honourific_salutation" autocomplete="off" value='Dr' />
+                        <label for="personSalutation-dr">Dr</label></div>
+
+                    <div style="display:none" class="mailType-person-off mailType-firm-on mailType-parliament-off mailType-senate-off mailType-whouse-off  example-address" id="attention-container">
+
+                        <input type="text" name="attn_name" id="attn-name" autocomplete="off" pattern="^[A-Za-z' ][A-Za-z ,.'-]+$" placeholder="attention" /> John Doe</div>
+
+                    <div class="can-on usa-off nz-off " style="user-select: none;">
+                        <div style="display:none; user-select: none;" id="parliamentCan-container" class="mailType-person-off mailType-firm-off mailType-parliament-on mailType-senate-on whouse-off">
+
+                            <input class="parliamentCan-is-required" type="radio" id="parliamentCan-not" name="can_parl_sen_sal" autocomplete="off" value="" /><label for="parliamentCan-not">None</label>
+                            <input type="radio" id="parliamentCan-plain" name="can_parl_sen_sal" autocomplete="off" value="The Honourable" /><label for="parliamentCan-plain">Honourable</label>
+                            <input type="radio" id="parliamentCan-right" name="can_parl_sen_sal" autocomplete="off" value="The Right Honourable" /><label for="parliamentCan-right">Right
+              Honourable</label> </div>
+                    </div>
+
+                    <div class="can-off nz-on usa-off">
+                        <div style="display:none" id="parliamentNz-container" class="mailType-person-off mailType-firm-off mailType-parliament-on mailType-senate-off mailType-whouse-off">
+                            <input class="parliamentNz-is-required" type="radio" id="parliamentNz-not" name="nz_parliament_sal" autocomplete="off" value="" />
+                            <label for="parliamentNz-not">None</label>
+                            <input type="radio" id="parliamentNz-plain" name="nz_parliament_sal" autocomplete="off" value="Hon" />
+                            <label for="parliamentNz-plain">Hon</label>
+                            <input type="radio" id="parliamentNz-right" name="nz_parliament_sal" autocomplete="off" value="Rt Hon" />
+                            <label for="parliamentNz-right">Rt Hon</label> </div>
+                    </div>
+
+                    <div class="mailType-person-off mailType-firm-off mailType-parliament-off mailType-senate-off mailType-whouse-on">
+                        &nbsp;
+
+                    </div>
+                </div>
+
+
+
+                <div id="struct_name_input" class="struct-middle">
+                    <div style="display:none" id="person-container" class="mailType-person-on mailType-firm-off mailType-parliament-off mailType-senate-off mailType-whouse-off  example-address">
+                        <input type="text" name="to_name" id="person-name" autocomplete="off" pattern="^[A-Za-z' ][A-Za-z ,.'-]+$" required="required" placeholder="name of person" /> Jane Doe
+                    </div>
+
+                    <div style="display:none" id="firm-container" class="mailType-person-off mailType-firm-on mailType-parliament-off mailType-senate-off mailType-whouse-off  example-address">
+                        <input type="text" name="to_name" id="firm-name" autocomplete="off" pattern="^[A-Za-z' ][A-Za-z ,.'-]+$" required="required" placeholder="name of firm" /> Acme Corp </div>
+
+
+                    <div style="display:none" id="parliament-container" class="mailType-person-off mailType-firm-off mailType-parliament-on mailType-senate-off mailType-whouse-off  example-address">
+                        <input type="text" name="to_name" id="parliament-name" autocomplete="off" pattern="^[A-Za-z' ][A-Za-z ,.'-]+$" required="required" /> John Smith </div>
+
+                    <div style="display:none" id="senate-container" class="mailType-person-off mailType-firm-off mailType-parliament-off mailType-senate-on mailType-whouse-off  example-address">
+                        <input type="text" name="to_name" id="senate-name" autocomplete="off" pattern="^[A-Za-z' ][A-Za-z ,.'-]+$" required="required" /> Jane Doe </div>
+
+                    <div class="mailType-person-off mailType-firm-off mailType-parliament-off mailType-senate-off mailType-whouse-on container-good">
+                        The President of the United States
+                    </div>
+                </div>
+
+
+
+
+
+                <div id="struct_strt_input" class="struct-middle">
+
+                    <div id="address-container">
+                        <span style="display:none" class="mailType-person-on mailType-firm-on mailType-parliament-off mailType-senate-off mailType-whouse-off">
+
+            <input type="text" id="address-street" name="address_street" autocomplete="off"
+              pattern="^[0-9A-Za-z #][0-9A-Za-z #'-//]+$" placeholder="street address" value="" required="required" />
+            <span class="can-on nz-off usa-off example-address">6-12345 Yonge St</span>
+                        <span class="can-off nz-on usa-off example-address">6/12345 King St</span>
+                        <span class="can-off nz-off usa-on example-address">
+              12345 Main St Apt 6</span>
+                        </span>
+
+                        <span style="display:none" class="mailType-person-off mailType-firm-off mailType-parliament-on mailType-senate-off mailType-whouse-off container-good">
+
+            <span class="can-on nz-off usa-off">
+              <input type="text" style="visibility:hidden;" />
+              House of Commons</span>
+                        <span class="can-off nz-on usa-off">
+              <input type="text" style="visibility:hidden;" /> Freepost Parliament
+            </span>
+                        </span>
+
+                        <span style="display:none" class="mailType-person-off mailType-firm-off mailType-parliament-off mailType-senate-on mailType-whouse-off container-good">
+
+            <input type="text" style="visibility:hidden;" /> the Senate of Canada
+          </span>
+
+                        <span class="mailType-person-off mailType-firm-off mailType-parliament-off mailType-senate-off mailType-whouse-on container-good">
+
+            1600 Pennsylvania Avenue NW
+          </span>
+
+
+                    </div>
+
+                </div>
+
+
+
+
+
+                <div id="struct_city_input" class="struct-middle">
+
+                    <div id="city-container">
+                        <span style="display:none" class="mailType-person-on mailType-firm-on mailType-parliament-off mailType-senate-off mailType-whouse-off">
+            <input type="text" id="city-place" name="city_place" autocomplete="off" pattern="^[A-Za-z ][A-Za-z '-]+$"
+              placeholder="city" value="" required="required" />
+
+
+
+            <span class="can-on nz-off usa-off  example-address">
+              Toronto
+            </span>
+                        <span class="can-off nz-on usa-off  example-address">
+              Auckland
+            </span>
+                        <span class="can-off nz-off usa-on  example-address">
+              Springfield
+            </span>
+
+
+
+                        </span>
+
+                        <span style="display:none" class="mailType-person-off mailType-firm-off mailType-parliament-on mailType-senate-off mailType-whouse-off container-good">
+            <span class="can-on nz-off usa-off">
+              <input type="text" style="visibility:hidden;" />
+              Ottawa
+            </span>
+                        <span class="can-off nz-on usa-off">
+              <input type="text" style="visibility:hidden;" /> Private Bag 18 888
+            </span>
+
+                        </span>
+
+                        <span style="display:none" class="mailType-person-off mailType-firm-off mailType-parliament-off mailType-senate-on mailType-whouse-off container-good">
+
+            <input type="text" style="visibility:hidden;" />
+            Ottawa
+          </span>
+
+                        <span class="mailType-person-off mailType-firm-off mailType-parliament-off mailType-senate-off mailType-whouse-on container-good">
+
+            Washington
+          </span>
+
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div id="struct_prov_input" class="struct-middle">
+
+
+                    <div style="display:none" id="province-container" class="can-on nz-off usa-off">
+
+                        <span class="mailType-person-off mailType-firm-off mailType-parliament-on mailType-senate-on mailType-whouse-off  container-good ">
+
+
+
+
+
+            <input type="text" style="visibility:hidden;" /><span id="parliament-senate-ontario">Ontario</span> </span>
+
+                        <span class="mailType-person-on mailType-firm-on mailType-parliament-off mailType-senate-off mailType-whouse-off   ">
+            <input id="can-state" type="text" value="" onfocus="document.getElementById('cancode-system').focus();"
+              placeholder="province" class="can-on nz-off usa-off" autocomplete="off">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div id="can-provinces-container">
+              <div id="can-provinces-buttons">
+                <div class="can-title">PROVINCES</div>
+
+
+                <div>
+                  <input type="radio" id="province-ab" name="province_type" autocomplete="off" class="hide-circle"
+                    value="Alberta" />
+                  <button type="button" class="reveal-ab"><label for="province-ab"
+                      class="province-long-name">Alberta</label></button>
+                </div>
+
+                <div>
+                  <input type="radio" id="province-bc" name="province_type" autocomplete="off" class="hide-circle"
+                    value="British Columbia" />
+                  <button type="button" class="reveal-bc"><label for="province-bc" class="province-long-name">British
+                      Columbia</label></button>
+                </div>
+
+                <div>
+                  <input type="radio" id="province-mb" name="province_type" autocomplete="off" class="hide-circle"
+                    value="Manitoba" />
+                  <button type="button" class="reveal-mb"><label for="province-mb"
+                      class="province-long-name">Manitoba</label></button>
+                </div>
+
+
+
+
+                <div>
+                  <input type="radio" id="province-nb" name="province_type" autocomplete="off" class="hide-circle"
+                    value="New Brunswick" />
+                  <button type="button" class="reveal-nb"><label for="province-nb" class="province-long-name">New
+                      Brunswick</label></button>
+                </div>
+
+                <div>
+                  <input type="radio" id="province-nl" name="province_type" autocomplete="off" class="hide-circle"
+                    value="Newfoundland and Labrador" />
+                  <button type="button" class="reveal-nl"><label for="province-nl"
+                      class="province-long-name">Newfoundland and Labrador</label></button>
+                </div>
+
+
+                <div>
+                  <input type="radio" id="province-nt" name="province_type" autocomplete="off" class="hide-circle"
+                    value="Northwest Territories" />
+                  <button type="button" class="reveal-nt"><label for="province-nt" class="province-long-name">Northwest
+                      Territories</label></button>
+                </div>
+
+                <div>
+                  <input type="radio" id="province-ns" name="province_type" autocomplete="off" class="hide-circle"
+                    value="Nova Scotia" />
+                  <button type="button" class="reveal-ns"><label for="province-ns" class="province-long-name">Nova
+                      Scotia</label></button>
+                </div>
+
+                <div>&nbsp;</div>
+
+                <div>
+                  <input type="radio" id="province-nu" name="province_type" autocomplete="off" class="hide-circle"
+                    value="Nunavut" />
+                  <button type="button" class="reveal-nu"><label for="province-nu"
+                      class="province-long-name">Nunavut</label></button>
+                </div>
+
+                <div>
+                  <input type="radio" id="province-on" name="province_type" autocomplete="off" class="hide-circle"
+                    value="Ontario" />
+                  <button type="button" class="reveal-on"><label for="province-on"
+                      class="province-long-name">Ontario</label></button>
+                </div>
+
+                <div>
+                  <input type="radio" id="province-pe" name="province_type" autocomplete="off" class="hide-circle"
+                    value="Prince Edward Island" />
+                  <button type="button" class="reveal-pe"><label for="province-pe" class="province-long-name">Prince
+                      Edward Island</label></button>
+                </div>
+
+
+                <div>
+                  <input type="radio" id="province-qc" name="province_type" autocomplete="off" class="hide-circle"
+                    value="Quebec" />
+                  <button type="button" class="reveal-qc"><label for="province-qc"
+                      class="province-long-name">Quebec</label></button>
+                </div>
+
+
+                <div>
+                  <input type="radio" id="province-sk" name="province_type" autocomplete="off" class="hide-circle"
+                    value="Saskatchewan" />
+                  <button type="button" class="reveal-sk"><label for="province-sk"
+                      class="province-long-name">Saskatchewan</label></button>
+                </div>
+
+
+                <div>
+                  <input type="radio" id="province-yt" name="province_type" autocomplete="off" class="hide-circle"
+                    value="Yukon" />
+                  <button type="button" class="reveal-yt"><label for="province-yt"
+                      class="province-long-name">Yukon</label></button>
+                </div>
+
+
+
+
+                <div id="province-last">
+                  <input type="radio" id="province-none" name="province_type" autocomplete="off" class="hide-circle"
+                    value="" />
+                  <label for="province-none" class="province-long-name" id="province-close">&#10006;</label>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div id="fullscreen-can">
+            </div>
+
+          </span>
+
+
+
+
+                    </div><!-- id===province-container end -->
+
+                    <span style="display:none" class="can-on nz-off usa-off">
+
+          <input type="text" style="visibility:hidden;" />
+
+          <span
+            class="mailType-person-on mailType-firm-on mailType-parliament-off mailType-senate-off mailType-whouse-off  example-address">
+            Ontario
+          </span>
+
+                    </span>
+
+
+
+
+
+
+
+
+
+
+
+                    <span style="display:none" class="can-off nz-on usa-off">
+
+          <span
+            class="mailType-person-on mailType-firm-on mailType-parliament-off mailType-senate-off mailType-whouse-off   ">
+            &nbsp;
+
+
+          </span>
+
+
+                    <!--      https://www.parliament.nz/en/get-involved/have-your-say/contact-an-mp/  -->
+                    <span class="mailType-person-off mailType-firm-off mailType-parliament-on mailType-senate-off mailType-whouse-off  container-good ">
+            <input type="text" style="visibility:hidden;" /> Parliament Buildings
+          </span>
+
+
+
+
+
+
+                    </span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <span id="state-container" class="can-off nz-off usa-on">
+
+
+
+
+
+
+
+          <span
+            class="mailType-person-off mailType-firm-off mailType-parliament-off mailType-senate-off mailType-whouse-on  container-good ">
+
+            District of Columbia
+          </span>
+
+
+
+
+                    <span style="display:none" class="mailType-person-on mailType-firm-on mailType-parliament-off mailType-senate-off mailType-whouse-off   ">
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <input id="usa-state" type="text" value="" onfocus="document.getElementById('usacode-system').focus();"
+              placeholder="state" autocomplete="off">
+
+
+
+
+
+
+
+            <div id="usa-states-container">
+              <div id="usa-states-buttons">
+                <div class="usa-title">STATES</div>
+
+
+
+                <div>
+                  <input type="radio" id="state-al" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Alabama" />
+                  <button type="button" class="show-al"><label for="state-al"
+                      class="state-long-name">Alabama</label></button>
+                </div>
+
+                <div>
+                  <input type="radio" id="state-ak" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Alaska" />
+                  <button type="button" class="show-ak"><label for="state-ak"
+                      class="state-long-name">Alaska</label></button>
+                </div>
+
+                <div>
+                  <input type="radio" id="state-az" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Arizona" />
+                  <button type="button" class="show-az"><label for="state-az"
+                      class="state-long-name">Arizona</label></button>
+                </div>
+
+
+                <div>
+                  <input type="radio" id="state-ar" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Arkansas" />
+                  <button type="button" class="show-ar"><label for="state-ar"
+                      class="state-long-name">Arkansas</label></button>
+                </div>
+
+
+                <div>
+                  <input type="radio" id="state-ca" name="state_type" autocomplete="off" class="hide-circle"
+                    value="California" />
+                  <button type="button" class="show-ca"><label for="state-ca"
+                      class="state-long-name">California</label></button>
+                </div>
+
+
+                <div>
+                  <input type="radio" id="state-co" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Colorado" />
+                  <button type="button" class="show-co"><label for="state-co"
+                      class="state-long-name">Colorado</label></button>
+                </div>
+
+
+                <div>
+                  <input type="radio" id="state-ct" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Connecticut" />
+                  <button type="button" class="show-ct"><label for="state-ct"
+                      class="state-long-name">Connecticut</label></button>
+                </div>
+
+                <div>
+                  <input type="radio" id="state-de" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Delaware" />
+                  <button type="button" class="show-de"><label for="state-de"
+                      class="state-long-name">Delaware</label></button>
+                </div>
+
+                <div>
+                  <input type="radio" id="state-fl" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Florida" />
+                  <button type="button" class="show-fl"><label for="state-fl"
+                      class="state-long-name">Florida</label></button>
+                </div>
+
+
+
+
+                <div>
+                  <input type="radio" id="state-ga" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Georgia" />
+                  <button type="button" class="show-ga"><label for="state-ga"
+                      class="state-long-name">Georgia</label></button>
+                </div>
+
+                <div>
+                  <input type="radio" id="state-hi" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Hawaii" />
+                  <button type="button" class="show-hi"><label for="state-hi"
+                      class="state-long-name">Hawaii</label></button>
+                </div>
+
+
+                <div>
+                  <input type="radio" id="state-id" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Idaho" />
+                  <button type="button" class="show-id"><label for="state-id"
+                      class="state-long-name">Idaho</label></button>
+                </div>
+
+
+                <div>
+                  <input type="radio" id="state-il" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Illinois" />
+                  <button type="button" class="show-il"><label for="state-il"
+                      class="state-long-name">Illinois</label></button>
+                </div>
+
+
+                <div>
+                  <input type="radio" id="state-in" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Indiana" />
+                  <button type="button" class="show-in"><label for="state-in"
+                      class="state-long-name">Indiana</label></button>
+                </div>
+
+
+                <div>
+                  <input type="radio" id="state-ia" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Iowa" />
+                  <button type="button" class="show-ia"><label for="state-ia"
+                      class="state-long-name">Iowa</label></button>
+                </div>
+
+
+                <div>
+                  <input type="radio" id="state-ks" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Kansas" />
+                  <button type="button" class="show-ks"><label for="state-ks"
+                      class="state-long-name">Kansas</label></button>
+                </div>
+
+
+
+
+                <div>
+                  <input type="radio" id="state-ky" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Kentucky" />
+                  <button type="button" class="show-ky"><label for="state-ky"
+                      class="state-long-name">Kentucky</label></button>
+                </div>
+
+
+                <div>
+                  <input type="radio" id="state-la" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Louisiana" />
+                  <button type="button" class="show-la"><label for="state-la"
+                      class="state-long-name">Louisiana</label></button>
+                </div>
+
+
+                <div>
+                  <input type="radio" id="state-me" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Maine" />
+                  <button type="button" class="show-me"><label for="state-me"
+                      class="state-long-name">Maine</label></button>
+                </div>
+
+
+
+                <div>
+                  <input type="radio" id="state-md" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Maryland" />
+                  <button type="button" class="show-md"><label for="state-md"
+                      class="state-long-name">Maryland</label></button>
+                </div>
+
+
+
+                <div>
+                  <input type="radio" id="state-ma" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Massachusetts" />
+                  <button type="button" class="show-ma"><label for="state-ma"
+                      class="state-long-name">Massachusetts</label></button>
+                </div>
+
+
+                <div>
+                  <input type="radio" id="state-mi" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Michigan" />
+                  <button type="button" class="show-mi"><label for="state-mi"
+                      class="state-long-name">Michigan</label></button>
+                </div>
+
+
+                <div>
+                  <input type="radio" id="state-mn" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Minnesota" />
+                  <button type="button" class="show-mn"><label for="state-mn"
+                      class="state-long-name">Minnesota</label></button>
+                </div>
+
+
+                <div>
+                  <input type="radio" id="state-ms" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Mississippi" />
+                  <button type="button" class="show-ms"><label for="state-ms"
+                      class="state-long-name">Mississippi</label></button>
+                </div>
+
+                <div>
+                  <input type="radio" id="state-mo" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Missouri" />
+                  <button type="button" class="show-mo"><label for="state-mo"
+                      class="state-long-name">Missouri</label></button>
+                </div>
+
+
+                <div>
+                  <input type="radio" id="state-mt" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Montana" />
+                  <button type="button" class="show-mt"><label for="state-mt"
+                      class="state-long-name">Montana</label></button>
+                </div>
+
+
+
+                <div>
+                  <input type="radio" id="state-ne" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Nebraska" />
+                  <button type="button" class="show-ne"><label for="state-ne"
+                      class="state-long-name">Nebraska</label></button>
+                </div>
+
+
+                <div>
+                  <input type="radio" id="state-nv" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Nevada" />
+                  <button type="button" class="show-nv"><label for="state-nv"
+                      class="state-long-name">Nevada</label></button>
+                </div>
+
+
+                <div>
+                  <input type="radio" id="state-nh" name="state_type" autocomplete="off" class="hide-circle"
+                    value="New Hampshire" />
+                  <button type="button" class="show-nh"><label for="state-nh" class="state-long-name">New
+                      Hampshire</label></button>
+                </div>
+
+
+
+
+
+                <div>
+                  <input type="radio" id="state-nj" name="state_type" autocomplete="off" class="hide-circle"
+                    value="New Jersey" />
+                  <button type="button" class="show-nj"><label for="state-nj" class="state-long-name">New
+                      Jersey</label></button>
+                </div>
+
+
+                <div>
+                  <input type="radio" id="state-nm" name="state_type" autocomplete="off" class="hide-circle"
+                    value="New Mexico" />
+                  <button type="button" class="show-nm"><label for="state-nm" class="state-long-name">New
+                      Mexico</label></button>
+                </div>
+
+                <div>
+                  <input type="radio" id="state-ny" name="state_type" autocomplete="off" class="hide-circle"
+                    value="New York" />
+                  <button type="button" class="show-ny"><label for="state-ny" class="state-long-name">New
+                      York</label></button>
+                </div>
+
+
+
+                <div>
+                  <input type="radio" id="state-nc" name="state_type" autocomplete="off" class="hide-circle"
+                    value="North Carolina" />
+                  <button type="button" class="show-nc"><label for="state-nc" class="state-long-name">North
+                      Carolina</label></button>
+                </div>
+
+
+                <div>
+                  <input type="radio" id="state-nd" name="state_type" autocomplete="off" class="hide-circle"
+                    value="North Dakota" />
+                  <button type="button" class="show-nd"><label for="state-nd" class="state-long-name">North
+                      Dakota</label></button>
+                </div>
+
+
+
+
+                <div>
+                  <input type="radio" id="state-oh" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Ohio" />
+                  <button type="button" class="show-oh"><label for="state-oh"
+                      class="state-long-name">Ohio</label></button>
+                </div>
+
+
+                <div>
+                  <input type="radio" id="state-ok" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Oklahoma" />
+                  <button type="button" class="show-ok"><label for="state-ok"
+                      class="state-long-name">Oklahoma</label></button>
+                </div>
+
+
+
+                <div>
+                  <input type="radio" id="state-or" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Oregon" />
+                  <button type="button" class="show-or"><label for="state-or"
+                      class="state-long-name">Oregon</label></button>
+                </div>
+
+
+                <div>
+                  <input type="radio" id="state-pa" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Pennsylvania" />
+                  <button type="button" class="show-pa"><label for="state-pa"
+                      class="state-long-name">Pennsylvania</label></button>
+                </div>
+
+
+                <div>
+                  <input type="radio" id="state-ri" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Rhode Island" />
+                  <button type="button" class="show-ri"><label for="state-ri" class="state-long-name">Rhode
+                      Island</label></button>
+                </div>
+
+
+                <div>
+                  <input type="radio" id="state-sc" name="state_type" autocomplete="off" class="hide-circle"
+                    value="South Carolina" />
+                  <button type="button" class="show-sc"><label for="state-sc" class="state-long-name">South
+                      Carolina</label></button>
+                </div>
+
+                <div>
+                  <input type="radio" id="state-sd" name="state_type" autocomplete="off" class="hide-circle"
+                    value="South Dakota" />
+                  <button type="button" class="show-sd"><label for="state-sd" class="state-long-name">South
+                      Dakota</label></button>
+                </div>
+
+
+
+                <div>
+                  <input type="radio" id="state-tn" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Tennessee" />
+                  <button type="button" class="show-tn"><label for="state-tn"
+                      class="state-long-name">Tennessee</label></button>
+                </div>
+
+
+                <div>
+                  <input type="radio" id="state-tx" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Texas" />
+                  <button type="button" class="show-tx"><label for="state-tx"
+                      class="state-long-name">Texas</label></button>
+                </div>
+
+                <div>
+                  <input type="radio" id="state-ut" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Utah" />
+                  <button type="button" class="show-ut"><label for="state-ut"
+                      class="state-long-name">Utah</label></button>
+                </div>
+
+                <div>
+                  <input type="radio" id="state-vt" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Vermont" />
+                  <button type="button" class="show-vt"><label for="state-vt"
+                      class="state-long-name">Vermont</label></button>
+                </div>
+
+
+                <div>
+                  <input type="radio" id="state-va" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Virginia" />
+                  <button type="button" class="show-va"><label for="state-va"
+                      class="state-long-name">Virginia</label></button>
+                </div>
+
+
+                <div>
+                  <input type="radio" id="state-wa" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Washington" />
+                  <button type="button" class="show-wa"><label for="state-wa"
+                      class="state-long-name">Washington</label></button>
+                </div>
+
+
+
+                <div>
+                  <input type="radio" id="state-wv" name="state_type" autocomplete="off" class="hide-circle"
+                    value="West Virginia" />
+                  <button type="button" class="show-wv"><label for="state-wv" class="state-long-name">West
+                      Virginia</label></button>
+                </div>
+
+
+                <div>
+                  <input type="radio" id="state-wi" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Wisconsin" />
+                  <button type="button" class="show-wi"><label for="state-wi"
+                      class="state-long-name">Wisconsin</label></button>
+                </div>
+
+
+                <div>
+                  <input type="radio" id="state-wy" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Wyoming" />
+                  <button type="button" class="show-wy"><label for="state-wy"
+                      class="state-long-name">Wyoming</label></button>
+                </div>
+
+
+
+
+                <div class="usa-title">DISTRICT</div>
+
+                <div>
+                  <input type="radio" id="state-dc" name="state_type" autocomplete="off" class="hide-circle"
+                    value="District of Columbia" />
+                  <button type="button" class="show-dc"><label for="state-dc" class="state-long-name">Dist of
+                      Columbia</label></button>
+                </div>
+
+                <div>&nbsp;</div>
+
+
+
+                <div class="usa-title">ARMED FORCES</div>
+
+
+
+
+                <div>
+                  <input type="radio" id="state-aa" name="state_type" autocomplete="off" class="hide-circle"
+                    value="AF Americas" />
+                  <button type="button" class="show-aa"><label for="state-aa" class="state-long-name">AF
+                      Americas</label></button>
+                </div>
+
+
+                <div>
+                  <input type="radio" id="state-ap" name="state_type" autocomplete="off" class="hide-circle"
+                    value="AF Pacific" />
+                  <button type="button" class="show-ap"><label for="state-ap" class="state-long-name">AF
+                      Pacific</label></button>
+                </div>
+
+
+                <div>
+                  <input type="radio" id="state-ae" name="state_type" autocomplete="off" class="hide-circle"
+                    value="AF Others" />
+                  <button type="button" class="show-ae"><label for="state-ae" class="state-long-name">AF
+                      Others</label></button>
+                </div>
+
+
+
+
+
+
+                <div>&nbsp;</div>
+                <div class="usa-title">TERRITORIES</div>
+
+
+                <div>
+                  <input type="radio" id="state-as" name="state_type" autocomplete="off" class="hide-circle"
+                    value="American Samoa" />
+                  <button type="button" class="show-as"><label for="state-as" class="state-long-name">American
+                      Samoa</label></button>
+                </div>
+                <div>
+                  <input type="radio" id="state-gu" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Guam" />
+                  <button type="button" class="show-gu"><label for="state-gu"
+                      class="state-long-name">Guam</label></button>
+                </div>
+                <div>
+                  <input type="radio" id="state-mp" name="state_type" autocomplete="off" class="hide-circle"
+                    value="North Mariana Islands" />
+                  <button type="button" class="show-mp"><label for="state-mp" class="state-long-name">N Mariana
+                      Islands</label></button>
+                </div>
+                <div>
+                  <input type="radio" id="state-pr" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Puerto Rico" />
+                  <button type="button" class="show-pr"><label for="state-pr" class="state-long-name">Puerto
+                      Rico</label></button>
+                </div>
+                <div>
+                  <input type="radio" id="state-um" name="state_type" autocomplete="off" class="hide-circle"
+                    value="United States Minor Outlying Islands" />
+                  <button type="button" class="show-um"><label for="state-um" class="state-long-name">Minor Outlying
+                      Isl</label></button>
+                </div>
+                <div>
+                  <input type="radio" id="state-vi" name="state_type" autocomplete="off" class="hide-circle"
+                    value="Virgin Islands" />
+                  <button type="button" class="show-vi"><label for="state-vi" class="state-long-name">Virgin
+                      Islands</label></button>
+                </div>
+
+
+
+
+                <div id="close-box"><input type="radio" id="state-none" name="state_type" autocomplete="off"
+                    class="hide-circle" value="" />
+                  <label for="state-none" class="state-long-name" id="state-close">&#10006;</label>
+                </div>
+
+              </div>
+            </div>
+            <div id="fullscreen-usa">
+            </div>
+
+
+          </span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </span>
+                    <!-- state-container end -->
+
+
+                    <span style="display:none" class="can-off nz-off usa-on">
+
+          <input type="text" style="visibility:hidden;" />
+
+          <span
+            class="mailType-person-on mailType-firm-on mailType-parliament-off mailType-senate-off mailType-whouse-off  example-address">Puerto
+            Rico
+          </span>
+
+                    </span>
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+                <div id="struct_code_input" class="struct-middle">
+
+                    <div style="display:none" id="cancode-container" class="can-on  nz-off usa-off">
+                        <span class="mailType-person-on mailType-firm-on mailType-parliament-off mailType-senate-off mailType-whouse-off  example-address  ">
+            <input type="text" name="pcode_system" id="cancode-system" autocomplete="off"
+              pattern="^\s*[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d\s*$" placeholder="postal code" required="required" />
+            <span> A1B 2C3 </span>
+                        </span>
+                        <span class="mailType-person-off mailType-firm-off mailType-parliament-on mailType-senate-off mailType-whouse-off container-good  "><input
+              type="text" style="visibility:hidden;" /><span> K1A 0A6</span></span>
+
+                        <span class="mailType-person-off mailType-firm-off mailType-parliament-off mailType-senate-on mailType-whouse-off container-good  "><input
+              type="text" style="visibility:hidden;" /><span> K1A 0A4</span></span>
+                    </div>
+
+
+                    <div id="usacode-container" class="usa-on nz-off can-off">
+                        <span style="display:none" class="mailType-person-on mailType-firm-on mailType-parliament-off mailType-senate-off mailType-whouse-off   example-address ">
+            <input type="text" name="pcode_system" id="usacode-system" autocomplete="off"
+              pattern="^\s*\d{5}(?:[-\s]\d{4})?\s*$" placeholder="zip code" required="required" />
+
+
+            <span> 12345 - 1234 </span>
+
+
+                        </span>
+
+                        <span class="mailType-person-off mailType-firm-off mailType-parliament-off mailType-senate-off mailType-whouse-on  container-good ">20500</span>
+
+                    </div>
+
+                    <div style="display:none" id="nzcode-container" class="usa-off nz-on can-off">
+                        <span class="mailType-person-on mailType-firm-on mailType-parliament-off mailType-senate-off mailType-whouse-off  example-address ">
+            <input type="text" name="pcode_system" id="nzcode-system" autocomplete="off" pattern="^\s*\d{4}\s*$"
+              placeholder="postalcode" required="required" /> <span> 1234</span>
+                        </span>
+                        <span class="mailType-person-off mailType-firm-off mailType-parliament-on mailType-senate-off mailType-whouse-off  container-good ">
+            <input type="text" style="visibility:hidden;" /> Wellington 6160</span>
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="struct-items struct-middle" id="struct_type_placeholder">
+
+                    &nbsp;
+
+                </div>
+
+
+
+
+                <div class="struct-items struct-right" id="struct_first_empty_type">&nbsp;</div>
+                <div class="struct-items struct-left " id="struct_second_empty_type">&nbsp;</div>
+
+
+                <div id="struct_receiver_types">
+
+                    <span id="tab-type--person">
+          <input type="radio" id="mailType-person" name="mail_type" autocomplete="off" class="hide-circle" />
+          <label for="mailType-person" class="darken-type">Person</label>
+        </span>
+
+
+
+
+
+                    <span class="struct-items struct-left " id="struct_third_empty_type">&nbsp;</span>
+
+                    <span id="tab-type--firm">
+          <input type="radio" id="mailType-firm" name="mail_type" autocomplete="off" class="hide-circle" /><label
+            for="mailType-firm" class="darken-type">Firm</label>
+
+        </span>
+
+                    <span class="struct-items struct-left " id="struct_fourth_empty_type">&nbsp;</span>
+
+
+
+
+
+
+
+                    <span style="display:none" id="tab-type--parliament" class="usa-off nz-on can-on">
+
+          <input type="radio" id="mailType-parliament" name="mail_type" autocomplete="off" class="hide-circle" /><label
+            for="mailType-parliament" class="darken-type">Parliament</label>
+
+        </span>
+
+
+
+                    <span style="display:none" id="struct_fifth_empty_type" class="usa-off nz-off can-on">
+          <div>&nbsp;</div>
+        </span>
+
+
+
+
+
+
+                    <span style="display:none" id="tab-type--senate" class="usa-off nz-off can-on">
+
+          <input type="radio" id="mailType-senate" name="mail_type" autocomplete="off" class="hide-circle" /><label
+            for="mailType-senate" class="darken-type">Senate</label>
+
+
+        </span>
+
+
+
+
+                    <span id="tab-type--whouse" class="usa-on nz-off can-off">
+
+          <input type="radio" id="mailType-whouse" name="mail_type" autocomplete="off" class="hide-circle" /><label
+            for="mailType-whouse" class="darken-type" id="the-white-house">White &nbsp;House</label>
+
+        </span>
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+            </div>
+            <!-- rx-label-maker end -->
+
+
+
+
+
+
+
+
+
+
+
+            <div id="push_label_right">
+
+                <div style="display:none" class="can-on  nz-off usa-off">
+                    <div id="can-person" class="mailType-person-on mailType-firm-off mailType-parliament-off mailType-senate-off mailType-whouse-off ">
+                        <div class="cutout-incomplete"><br><strong>Incomplete Label to<br>a Canadian Person</strong><br><br></div>
+                    </div>
+
+                    <div id="can-firm" class="mailType-person-off mailType-firm-on mailType-parliament-off mailType-senate-off mailType-whouse-off">
+                        <div class="cutout-incomplete"><br><strong>Incomplete Label to<br> a Canadian Firm</strong><br><br></div>
+                    </div>
+
+                    <div id="can-parliament" class="mailType-person-off mailType-firm-off mailType-parliament-on mailType-senate-off mailType-whouse-off">
+                        <div class="cutout-incomplete"><br><strong>Incomplete Label to a<br>Canadian Parliamentarian</strong><br><br>
+                        </div>
+                    </div>
+
+                    <div id="can-senate" class="mailType-person-off mailType-firm-off mailType-parliament-off mailType-senate-on mailType-whouse-off">
+                        <div class="cutout-incomplete"><br><strong>Incomplete Label to<br> a Canadian Senator</strong><br><br> </div>
+                    </div>
+
+
+
+                </div>
+
+                <div style="display:none" class="can-off  nz-on usa-off">
+                    <div id="nz-person" class="mailType-person-on mailType-firm-off mailType-parliament-off mailType-senate-off mailType-whouse-off">
+                        <div class="cutout-incomplete"><br><strong>Incomplete Label to<br>a New Zealand Person</strong><br><br></div>
+                    </div>
+
+                    <div id="nz-firm" class="mailType-person-off mailType-firm-on mailType-parliament-off mailType-senate-off mailType-whouse-off">
+                        <div class="cutout-incomplete"><br><strong>Incomplete Label to<br>a New Zealand Firm</strong><br><br></div>
+                    </div>
+
+                    <div id="nz-parliament" class="mailType-person-off mailType-firm-off mailType-parliament-on mailType-senate-off mailType-whouse-off">
+                        <div class="cutout-incomplete"><br><strong>Incomplete Label to<br>a New Zealand
+              Parliamentarian</strong><br><br></div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="can-off  nz-off usa-on">
+                    <div style="display:none" id="usa-person" class="mailType-person-on mailType-firm-off mailType-parliament-off mailType-senate-off mailType-whouse-off">
+                        <div class="cutout-incomplete"><br><strong>Incomplete Label to<br>an American Person</strong><br><br></div>
+                    </div>
+
+                    <div style="display:none" id="usa-firm" class="mailType-person-off mailType-firm-on mailType-parliament-off mailType-senate-off mailType-whouse-off">
+                        <div class="cutout-incomplete"><br><strong>Incomplete Label to<br>an American Firm</strong><br><br></div>
+                    </div>
+
+                    <div id="usa-whouse" class="mailType-person-off mailType-firm-off mailType-parliament-off mailType-senate-off mailType-whouse-on">
+                        <div class="cutout-incomplete"><br><strong>Incomplete Label to The <br>President of the United States
+            </strong><br><br></div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+        </div>
+        <!-- rx-label-container end -->
+
+
+
+        <script src="global-constants.js"></script>
+
+        <script src="html-funcs.js"></script>
+        <script src="label-maker.js"></script>
+
+
+
+
+
+
+        <script>
+            var g_label_component$ = label_maker.buildLabelMaker('usa-mail', 'mailType-whouse');
+            //  var g_label_component$ = label_maker.buildLabelMaker('can-mail', 'mailType-person'); 
+            var g_label_maker_unsub = g_label_component$.subscribe(mail_data => label_maker.fillMailLabel(mail_data))
+
+            document.getElementById('terms-accept').click();
+            label_maker.changeSelect('usapost-delivery', 3);
+        </script>
+
+
+
+
+
+        <br><br>
+        <a href="tests/testing-frame.html" id="link-to-tests">&nbsp;Snapshot Tests</a>
+
+        <!-- will only execute tests if this page is in an iFrame  -->
+        <script src="tests/iframe-import.js"></script>
+
+
+</body>
+
+</html>

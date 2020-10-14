@@ -1,0 +1,101 @@
+@media screen and (max-width: 390px) {
+     :root {
+        --container-width: var(--330px-wide-control);
+        --container-height: 264px;
+        --receiver-height: 24px;
+    }
+    #struct_countries_input {
+        order: 1
+    }
+    #struct_term_input {
+        order: 2
+    }
+    #struct_serv_input {
+        order: 3
+    }
+    #struct_salu_input {
+        order: 4
+    }
+    #struct_name_input {
+        order: 5
+    }
+    #struct_strt_input {
+        order: 6
+    }
+    #struct_city_input {
+        order: 7
+    }
+    #struct_prov_input {
+        order: 8
+    }
+    #struct_code_input {
+        order: 9
+    }
+    #struct_receiver_types {
+        order: 10
+    }
+    #struct_type_placeholder {
+        order: 100;
+        display: none;
+    }
+    #struct_first_empty_type {
+        order: 101;
+        display: none;
+    }
+    #struct_second_empty_type {
+        order: 102;
+        display: none;
+    }
+    #struct_third_empty_type {
+        display: none;
+    }
+    #struct_fourth_empty_type {
+        display: none;
+    }
+    #struct_fifth_empty_type {
+        display: none;
+    }
+    #struct_top_emtpy_label {
+        order: 200;
+        width: 0;
+    }
+    #struct_term_label {
+        order: 201;
+        display: none;
+    }
+    #struct_serv_label {
+        order: 202;
+        display: none;
+    }
+    #struct_salu_label {
+        order: 203;
+        display: none;
+    }
+    #struct_name_label {
+        order: 204;
+        display: none;
+    }
+    #struct_strt_label {
+        order: 205;
+        display: none;
+    }
+    #struct_city_label {
+        order: 206;
+        display: none;
+    }
+    #struct_prov_label {
+        order: 207;
+        display: none;
+    }
+    #struct_code_label {
+        order: 208;
+        display: none;
+    }
+    #struct_bottom_emtpy_label {
+        order: 209;
+        display: none;
+    }
+    #push_label_right {
+        margin-left: 0px;
+    }
+}

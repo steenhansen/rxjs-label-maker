@@ -1,0 +1,96 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+:root {
+    --500px-wide-control: 500px;        
+    --wide-control-width: 500;
+    --wide-min-width: 500;
+
+    --390px-wide-control: 390px;
+    --medium-control-width: 390;      /* 57+4first + 329middle = 390control */
+    --medium-max-width: 499;
+    --medium-min-width: 390;
+
+    --330px-wide-control: 330px;   
+    --thin-control-width: 330;
+    --thin-max-width: 389;
+
+    --outline-width: 2;
+    --gray-tabs-background: #E0E0E0;
+    --state-prove-hover-col: #E5F1FB;
+    --average-grey-color: #888;
+    --back-ground-color: #f4f4f4;
+    --person-chosen: 1px;
+    --firm-chosen: 0px;
+    --parliament-chosen: 0px;
+    --senate-chosen: 0px;
+    --whouse-chosen: 0px;
+    --country-color: -1;   /* -1==usa, can==0, nz==1 */
+    --current-outline-hue: calc( var( --country-color) * 120);
+    --current-outline-color: hsl(var(--current-outline-hue), 50%, 50%);
+    --usa-color-hsl: hsl( calc(-1 * 120), 60%, 60%);
+    --usa-color-hover: hsl( calc(-1 * 120), 40%, 40%);
+    --can-color-hsl: hsl( calc( 0 * 120), 50%, 50%);
+    --can-color-hover: hsl( calc( 0 * 120), 40%, 40%);
+    --nz-color-hsl: hsl( calc( 1 * 120), 50%, 50%);
+    --nz-color-hover: hsl( calc( 1 * 120), 40%, 40%);
+    --receiver-font: 'sans-serif;';
+    --can-tab-height: '22px';
+    --nz-tab-height: '22px';
+    --usa-tab-height: '22px';
+    --person-tab-left-border: 'none';
+    --firm-tab-left-border: 'none';
+    --parliament-tab-left-border: 'none';
+    --senate-tab-left-border: 'none';
+    --whouse-tab-left-border: 'none';
+    --sans-serif: Arial, Helvetica, sans-serif;
+    --mono-space: "Lucida Console", Courier, monospace;
+    --with-serif: "Times New Roman", Times, serif;
+    --current-type-style: var(--with-serif);
+}

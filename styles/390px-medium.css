@@ -1,0 +1,152 @@
+@media screen and (max-width: 499px) {
+  :root {
+    --container-width: var(--390px-wide-control);
+    --container-height: 260px;
+    --receiver-height: 24px;
+    --person-left-offset: 10px;
+    --person-shift-up: calc( var(--person-chosen) * var(--outline-width));
+    --firm-left-offset: 20px;
+    --firm-shift-up: calc( var(--firm-chosen) * var(--outline-width));
+    --parliament-left-offset: 30px;
+    --parliament-shift-up: calc( var(--parliament-chosen) * var(--outline-width));
+    --senate-left-offset: -12px;
+    --senate-shift-up: calc( var(--senate-chosen) * var(--outline-width));
+    --whouse-left-offset: 30px;
+    --whouse-shift-up: calc( var(--whouse-chosen) * var(--outline-width));
+  }
+  #rx-label-maker #struct_receiver_types {
+    width: 300px;
+    background-color: unset;
+  }
+  #rx-label-maker #struct_receiver_types #struct_third_empty_type {
+    width: 0%;
+  }
+  #rx-label-maker #struct_receiver_types #struct_fourth_empty_type {
+    width: 0%;
+  }
+  #rx-label-maker #struct_receiver_types #struct_fifth_empty_type {
+    width: 0%;
+  }
+  #tab-type--person {
+    width: 66px;
+    left: var(--person-left-offset);
+    top: calc( 0px - var(--person-shift-up));
+    height: calc( var(--receiver-height) + var(--person-shift-up));
+  }
+  #tab-type--firm {
+    width: 60px;
+    left: var(--firm-left-offset);
+    top: calc( 0px - var( --firm-shift-up));
+    height: calc( var(--receiver-height) + var( --firm-shift-up));
+  }
+  #tab-type--parliament {
+    width: 90px;
+    left: var(--parliament-left-offset);
+    top: calc( 0px - var( --parliament-shift-up));
+    height: calc( var(--receiver-height) + var( --parliament-shift-up));
+  }
+  #tab-type--senate {
+    width: 60px;
+    left: var(--senate-left-offset);
+    top: calc( 0px - var( --senate-shift-up));
+    height: calc( var(--receiver-height) + var( --senate-shift-up));
+  }
+  #tab-type--whouse {
+    width: 115px;
+    left: var(--whouse-left-offset);
+    top: calc( 0px - var( --whouse-shift-up));
+    height: calc( var(--receiver-height) + var( --whouse-shift-up));
+  }
+  #struct_receiver_types {
+    flex-direction: row;
+    width: 344px;
+    height: var(--receiver-height);
+  }
+  [id*="tab-type--"] {
+    border-radius: 0px 0px 10px 10px;
+    border: 2px solid;
+    border-top: unset;
+  }
+  #struct_top_emtpy_label {
+    order: 1
+  }
+  #struct_term_label {
+    order: 2
+  }
+  #struct_serv_label {
+    order: 3
+  }
+  #struct_salu_label {
+    order: 4
+  }
+  #struct_name_label {
+    order: 5
+  }
+  #struct_strt_label {
+    order: 6
+  }
+  #struct_city_label {
+    order: 7
+  }
+  #struct_prov_label {
+    order: 8
+  }
+  #struct_code_label {
+    order: 9
+  }
+  #struct_bottom_emtpy_label {
+    order: 10
+  }
+  #struct_countries_input {
+    order: 11
+  }
+  #struct_term_input {
+    order: 12
+  }
+  #struct_serv_input {
+    order: 13
+  }
+  #struct_salu_input {
+    order: 14
+  }
+  #struct_name_input {
+    order: 15
+  }
+  #struct_strt_input {
+    order: 16
+  }
+  #struct_city_input {
+    order: 17
+  }
+  #struct_prov_input {
+    order: 18
+  }
+  #struct_code_input {
+    order: 19
+  }
+  #struct_receiver_types {
+    order: 20
+  }
+  #struct_type_placeholder {
+    order: 100
+  }
+  #struct_first_empty_type {
+    order: 101
+  }
+  #struct_second_empty_type {
+    order: 102
+  }
+  #struct_third_empty_type {
+    display: none;
+  }
+  #struct_fourth_empty_type {
+    display: none;
+  }
+  #struct_fifth_empty_type {
+    display: none;
+  }
+  #push_label_right {
+    margin-left: 60px;
+    /*height:204px;*/
+  }
+}

@@ -1,0 +1,213 @@
+
+input[type="checkbox"] {
+    margin-left: 4px;
+}
+
+input[type="text"] {
+    margin-left: 4px;
+}
+
+.struct-items {
+    height: 24px;
+}
+
+.struct-middle {
+    width: 324px;
+}
+
+.struct-right {
+    width: 344px;
+}
+
+.struct-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.struct-types {
+    overflow: hidden;
+}
+
+#can-provinces-container {
+    width: 326px;
+    height: 196px;
+}
+
+::placeholder {
+    color: var(--average-grey-color);
+    font-size: smaller;
+    opacity: 0.5;
+}
+
+.container-good {
+    color: black;
+}
+
+.start-need {
+    color: #f88;
+    float: right;
+    width: 100%;
+    text-align: right;
+    height: 26px;
+}
+
+#firm-attention {
+    float: right;
+    width: 100%;
+    text-align: right;
+    height: 26px;
+}
+
+.need-data {
+    color: red;
+}
+
+.have-data {
+    color: var(--average-grey-color);
+}
+
+.cutout-service {
+    height: 19px;
+    width: 300px;
+}
+
+#rx-label-maker>div {
+    height: 24px;
+}
+
+.with-serif {
+    font-family: var(--with-serif);
+}
+
+.sans-serif {
+    font-family: var(--sans-serif);
+}
+
+.mono-space {
+    font-family: var(--mono-space);
+}
+
+#cancode-container {
+    display: inline-block;
+}
+
+.struct-left {
+    font-family: var( --sans-serif);
+    font-size: 10px;
+    width: 57px;
+    margin-right: 4px;
+    line-height: 26px
+}
+
+.example-address {
+    font-size: 10px;
+    color: var(--average-grey-color);
+}
+
+#usa-whouse {
+    margin-left: 0px;
+}
+
+#rx-label-maker #struct_receiver_types #struct_third_empty_type {
+    height: 15px;
+    width: 100%;
+}
+
+#rx-label-maker #struct_receiver_types #struct_fourth_empty_type {
+    height: 15px;
+    width: 100%;
+}
+
+#rx-label-maker #struct_receiver_types #struct_fifth_empty_type {
+    height: 15px;
+    width: 100%;
+}
+
+.struct-types {
+    width: var(--container-width);
+    height: var(--container-height);
+}
+
+#struct_receiver_types {
+    display: flex;
+}
+
+#rx-label-container {
+    width: var(--container-width);
+    height: 464px;
+}
+
+#struct_first_empty_type {
+    width: 1px;
+}
+
+#struct_second_empty_type {
+    width: 1px;
+}
+
+#struct_type_placeholder {
+    width: 1px;
+}
+
+.struct-middle {
+    width: 325px;
+}
+
+
+/* Values which must be set to stop Edge/Chrome/FireFox testing differences. */
+
+select {
+    margin-left: 4px;
+    width: 250px;
+    overflow: visible;
+    height: 20px;
+}
+
+input[type="checkbox"] {
+    height: 13px;
+    width: 13px;
+}
+
+input[type="text"] {
+    height: 16px;
+    width: 165px;
+}
+
+input[type="radio"] {
+    margin: 3px 0px 0px 4px;
+    height: 13px;
+    width: 13px;
+}
+
+button {
+    border-color: rgb(240, 240, 240);
+    background-color: rgb(240, 240, 240);
+}
+
+#push_label_right {
+    height: 13px;
+}
+
+#terms-container {
+    height: 19px;
+}
+
+
+
+
+/* for empty rows in label*/
+div:empty {
+   display: none;
+}
+
+
+
+
+
+
+
+
+.print-text{
+    height:24px;
+}

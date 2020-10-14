@@ -1,0 +1,440 @@
+#fullscreen-can, #fullscreen-usa {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(90, 90, 90, 0.5);
+  z-index: 9;
+}
+
+.province-long-name:hover {
+  color: red;
+}
+
+#province-close {
+  font-size: x-large;
+  margin-right: -18px;
+}
+
+#province-last {
+  text-align: right;
+  position: absolute;
+  right: 16px;
+}
+
+#province-container {
+  position: absolute;
+  display: block;
+}
+
+#can-provinces-container {
+  position: absolute;
+  display: none;
+  z-index: 10;
+}
+
+#can-provinces-buttons {
+  user-select: none;
+  position: relative;
+  background-color: var(--current-outline-color);
+  height: 192px;
+  padding-left: 4px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  line-height: 24px;
+  padding-bottom: 4px;
+  font-size: 14px;
+}
+
+.hide-circle {
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+}
+
+button {
+  padding: 0px;
+}
+
+label {
+  padding: 5px 2px 5px 0px;
+  /* NB to get entire button clickable, not just text */
+}
+
+.usa-title {
+  text-align: center;
+  color: white;
+  font-size: 14px;
+}
+
+.state-long-name:hover {
+  color: red;
+}
+
+#usa-states-container {
+  width: 326px;
+  position: absolute;
+  display: none;
+  z-index: 10;
+}
+
+#usa-states-buttons {
+  user-select: none;
+  position: relative;
+  margin-top: -50px;
+  background-color: var(--current-outline-color);
+  padding-left: 8px;
+  height: 530px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  line-height: 24px;
+}
+
+#state-container {
+  position: absolute;
+  display: block
+}
+
+#state-close {
+  font-size: x-large;
+  position: relative;
+}
+
+#close-box {
+  position: absolute;
+  right: 0px;
+}
+
+.mailType-whouse-on {
+  margin-left: 12px;
+}
+
+#usa-state:hover {
+  background-color: var(--state-prove-hover-col);
+  cursor: default;
+  border-width: 1px;
+  height: 18px;
+  padding-left: 2px;
+}
+
+#can-state:hover {
+  background-color: var(--state-prove-hover-col);
+  cursor: default;
+  border-width: 1px;
+  height: 18px;
+  padding-left: 2px;
+}
+
+#usa-state {
+  user-select: none;
+  position: absolute;
+}
+
+#can-state {
+  user-select: none;
+  position: absolute;
+}
+
+#parliament-senate-ontario {
+  margin-left: 4px;
+}
+
+#province-ab:checked~.reveal-ab {
+  font-weight: bold;
+}
+
+#province-bc:checked~.reveal-bc {
+  font-weight: bold;
+}
+
+#province-mb:checked~.reveal-mb {
+  font-weight: bold;
+}
+
+#province-nb:checked~.reveal-nb {
+  font-weight: bold;
+}
+
+#province-nl:checked~.reveal-nl {
+  font-weight: bold;
+}
+
+#province-nt:checked~.reveal-nt {
+  font-weight: bold;
+}
+
+#province-ns:checked~.reveal-ns {
+  font-weight: bold;
+}
+
+#province-nu:checked~.reveal-nu {
+  font-weight: bold;
+}
+
+#province-on:checked~.reveal-on {
+  font-weight: bold;
+}
+
+#province-pe:checked~.reveal-pe {
+  font-weight: bold;
+}
+
+#province-qc:checked~.reveal-qc {
+  font-weight: bold;
+}
+
+#province-sk:checked~.reveal-sk {
+  font-weight: bold;
+}
+
+#province-yt:checked~.reveal-yt {
+  font-weight: bold;
+}
+
+#state-al:checked~.show-al {
+  font-weight: bold;
+}
+
+#state-ak:checked~.show-ak {
+  font-weight: bold;
+}
+
+#state-az:checked~.show-az {
+  font-weight: bold;
+}
+
+#state-ar:checked~.show-ar {
+  font-weight: bold;
+}
+
+#state-ca:checked~.show-ca {
+  font-weight: bold;
+}
+
+#state-co:checked~.show-co {
+  font-weight: bold;
+}
+
+#state-ct:checked~.show-ct {
+  font-weight: bold;
+}
+
+#state-de:checked~.show-de {
+  font-weight: bold;
+}
+
+#state-fl:checked~.show-fl {
+  font-weight: bold;
+}
+
+#state-ga:checked~.show-ga {
+  font-weight: bold;
+}
+
+#state-hi:checked~.show-hi {
+  font-weight: bold;
+}
+
+#state-id:checked~.show-id {
+  font-weight: bold;
+}
+
+#state-il:checked~.show-il {
+  font-weight: bold;
+}
+
+#state-in:checked~.show-in {
+  font-weight: bold;
+}
+
+#state-ia:checked~.show-ia {
+  font-weight: bold;
+}
+
+#state-ks:checked~.show-ks {
+  font-weight: bold;
+}
+
+#state-ky:checked~.show-ky {
+  font-weight: bold;
+}
+
+#state-la:checked~.show-la {
+  font-weight: bold;
+}
+
+#state-me:checked~.show-me {
+  font-weight: bold;
+}
+
+#state-md:checked~.show-md {
+  font-weight: bold;
+}
+
+#state-ma:checked~.show-ma {
+  font-weight: bold;
+}
+
+#state-mi:checked~.show-mi {
+  font-weight: bold;
+}
+
+#state-mn:checked~.show-mn {
+  font-weight: bold;
+}
+
+#state-ms:checked~.show-ms {
+  font-weight: bold;
+}
+
+#state-mo:checked~.show-mo {
+  font-weight: bold;
+}
+
+#state-mt:checked~.show-mt {
+  font-weight: bold;
+}
+
+#state-ne:checked~.show-ne {
+  font-weight: bold;
+}
+
+#state-nv:checked~.show-nv {
+  font-weight: bold;
+}
+
+#state-nh:checked~.show-nh {
+  font-weight: bold;
+}
+
+#state-nj:checked~.show-nj {
+  font-weight: bold;
+}
+
+#state-nm:checked~.show-nm {
+  font-weight: bold;
+}
+
+#state-ny:checked~.show-ny {
+  font-weight: bold;
+}
+
+#state-nc:checked~.show-nc {
+  font-weight: bold;
+}
+
+#state-nd:checked~.show-nd {
+  font-weight: bold;
+}
+
+#state-oh:checked~.show-oh {
+  font-weight: bold;
+}
+
+#state-ok:checked~.show-ok {
+  font-weight: bold;
+}
+
+#state-or:checked~.show-or {
+  font-weight: bold;
+}
+
+#state-pa:checked~.show-pa {
+  font-weight: bold;
+}
+
+#state-ri:checked~.show-ri {
+  font-weight: bold;
+}
+
+#state-sc:checked~.show-sc {
+  font-weight: bold;
+}
+
+#state-sd:checked~.show-sd {
+  font-weight: bold;
+}
+
+#state-tn:checked~.show-tn {
+  font-weight: bold;
+}
+
+#state-tx:checked~.show-tx {
+  font-weight: bold;
+}
+
+#state-ut:checked~.show-ut {
+  font-weight: bold;
+}
+
+#state-vt:checked~.show-vt {
+  font-weight: bold;
+}
+
+#state-va:checked~.show-va {
+  font-weight: bold;
+}
+
+#state-vi:checked~.show-vi {
+  font-weight: bold;
+}
+
+#state-wa:checked~.show-wa {
+  font-weight: bold;
+}
+
+#state-wv:checked~.show-wv {
+  font-weight: bold;
+}
+
+#state-wi:checked~.show-wi {
+  font-weight: bold;
+}
+
+#state-wy:checked~.show-wy {
+  font-weight: bold;
+}
+
+#state-dc:checked~.show-dc {
+  font-weight: bold;
+}
+
+#state-aa:checked~.show-aa {
+  font-weight: bold;
+}
+
+#state-ap:checked~.show-ap {
+  font-weight: bold;
+}
+
+#state-ae:checked~.show-ae {
+  font-weight: bold;
+}
+
+#state-as:checked~.show-as {
+  font-weight: bold;
+}
+
+#state-gu:checked~.show-gu {
+  font-weight: bold;
+}
+
+#state-mp:checked~.show-mp {
+  font-weight: bold;
+}
+
+#state-pr:checked~.show-pr {
+  font-weight: bold;
+}
+
+#state-um:checked~.show-um {
+  font-weight: bold;
+}
+
+#state-vi:checked~.show-vi {
+  font-weight: bold;
+}

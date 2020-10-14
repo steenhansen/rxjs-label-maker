@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" type="text/css" href="../styles/0px-and-up.css" media="screen" />
+
+</head>
+
+<body>
+  <div>
+      <br> 
+      <div id="zoom-100-percent" style="color:red">
+         Adjust zoom to be 100% for Firefox, Chrome, and Edge snapshot tests.
+      </div>
+    <div style="height:111px; width:310px; float:left">
+
+      <button onclick="sml_test_buttons.a_smallTest()">A small</button>
+      <button onclick="sml_test_buttons.a_mediumTest()">A medium</button>
+      <button onclick="sml_test_buttons.a_largeTest()">A large</button>
+      <br>
+      <button onclick="sml_test_buttons.b_smallTest()">B small</button>
+      <button onclick="sml_test_buttons.b_mediumTest()">B medium</button>
+      <button onclick="sml_test_buttons.b_largeTest()">B large</button>
+      <br>
+      <button onclick="sml_test_buttons.c_smallTest()">C small</button>
+      <button onclick="sml_test_buttons.c_mediumTest()">C medium</button>
+      <button onclick="sml_test_buttons.c_largeTest()">C large</button>
+      <br>
+      <button onclick="sml_test_buttons.check_smallTest()">CHECK small</button>
+      <button onclick="sml_test_buttons.check_mediumTest()">CHECK medium</button>
+      <button onclick="sml_test_buttons.check_largeTest()">CHECK large</button>
+    </div>
+    To fail all medium tests, set zoom to 125% with Edge.
+  <br> 
+    <div style="width:666px; float:left">
+
+      <iframe id="myIframe" name="testingFrame" title="Inline Frame Tests" width="100%" height="725" style="background: #fffff0;" 
+        src="../index.html">
+      </iframe>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  <script src="sml-test-buttons.js"></script>
+
+
+
+
+
+</body>
+
+</html>

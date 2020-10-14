@@ -1,0 +1,48 @@
+  :root {
+    --container-width: var(--500px-wide-control);
+    --container-height: 260px;
+    --receiver-width: 110px;
+    --person-shift-left: calc( -1 * var(--person-chosen) * var(--outline-width));
+    --firm-shift-left: calc( -1 * var(--firm-chosen) * var(--outline-width));
+    --parliament-shift-left: calc( -1 * var(--parliament-chosen) * var(--outline-width));
+    --senate-shift-left: calc( -1 * var(--senate-chosen) * var(--outline-width));
+    --whouse-shift-left: calc( -1 *var(--whouse-chosen) * var(--outline-width));
+  }
+  #tab-type--person {
+    top: 0px;
+    left: var(--person-shift-left);
+    width: 108px;
+  }
+  #tab-type--firm {
+    top: 0px;
+    left: var(--firm-shift-left);
+    width: 108px;
+  }
+  #tab-type--parliament {
+    top: 0px;
+    left: var(--parliament-shift-left);
+    width: 108px;
+  }
+  #tab-type--senate {
+    top: 0px;
+    left: var(--senate-shift-left);
+    width: 108px;
+  }
+  #tab-type--whouse {
+    top: 0px;
+    left: var(--whouse-shift-left);
+    width: 108px;
+  }
+  #struct_receiver_types {
+    flex-direction: column;
+    width: var(--receiver-width);
+    height: 194px;
+  }
+  [id*="tab-type--"] {
+    border-radius: 0px 10px 10px 0px;
+    border: 2px solid;
+    border-left: unset;
+  }
+  #push_label_right {
+    margin-left: 60px;
+  }
