@@ -158,3 +158,6 @@ var diff_color = (function () {
 
 diff_color.callTest();
 
+window.onmessage = function (event) {
+  diff_color.refreshCallTest(event.data);
+};

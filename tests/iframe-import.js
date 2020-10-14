@@ -4,7 +4,7 @@
 
 var iframe_import = (function () {
 
-  function loadScript(file_name) {
+   function loadScript(file_name) {
     var new_js = document.createElement("script");
     new_js.async = false;
     new_js.src = file_name; 
@@ -20,6 +20,7 @@ var iframe_import = (function () {
   }
 
   function runTests(get_url) {
+
     loadScript("lib/kpdecker-jsdiff.js");
     loadScript("tests/style-values.js");
 
@@ -29,11 +30,7 @@ var iframe_import = (function () {
     includeTest('b');
     includeTest('c');
 
-    loadScript("tests/diff-color.js");  // NB must be after tests are all declared
-
-    window.onmessage = function (event) {
-      diff_color.refreshCallTest(event.data);
-    };
+    loadScript("tests/diff-color.js")
   }
 
   return {
@@ -41,7 +38,6 @@ var iframe_import = (function () {
   };
 
 })();
-
 
 if (HTML_FUNCTIONS.pageInIframe()) {          
    document.getElementById('link-to-tests').style.display='none';
